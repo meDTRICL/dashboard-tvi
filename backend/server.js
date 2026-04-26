@@ -6,7 +6,7 @@ const csv = require("csv-parser");
 const app = express();
 app.use(cors());
 
-const PORT = 9567;
+const PORT = process.env.PORT || 3000;
 const CSV_FILE = "data.csv";
 
 function readCSV(filterFn = null) {
